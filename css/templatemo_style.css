@@ -279,7 +279,17 @@ h6 {
   text-transform: uppercase;
   font-weight: 600;
 }
-.section-title:before {
+
+.section-title-about {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.section-title:before,
+.section-title-about:before {
   content: '';
   width: 180px;
   height: 3px;
@@ -288,7 +298,8 @@ h6 {
   margin-right: 15px;
   display: inline-block;
 }
-.section-title:after {
+.section-title:after,
+.section-title-about:after {
   content: '';
   width: 180px;
   height: 3px;
@@ -311,24 +322,26 @@ h6 {
 .site-header {
   position: fixed;
   min-height: 102px;
-  height: 102px;
+  height: 110px;
   width: 100%;
   z-index: 9999;
-  background-color: #26B864;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #FD8400;
 }
 
 #templatemo_logo {
-  background-color: #26b864;
+  background-color: #FFFFFF;
   background-image: url(../images/templatemo_logo.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
   height: 102px;
   display: block;
+  margin-top: 4px;
 }
 #templatemo_logo h1 {
   margin: 0;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 102px;
   display: block;
 }
@@ -344,7 +357,7 @@ h6 {
 }
 .main-menu ul {
   position: absolute;
-  background-color: #26B864;
+  background-color: #FFFFFF;
   width: 100%;
 }
 .main-menu ul li {
@@ -354,7 +367,7 @@ h6 {
   line-height: 102px;
 }
 .main-menu ul li a {
-  color: white;
+  color: #FD8400;
   font-weight: 600;
   font-size: 18px;
   text-transform: uppercase;
@@ -371,7 +384,7 @@ h6 {
   display: none;
   margin: 40px 35px 0 0;
   font-size: 24px;
-  color: white;
+  color: #FD8400;
   text-align: right;
 }
 
@@ -384,6 +397,7 @@ h6 {
 .responsive .main-menu ul li a {
   line-height: 55px;
   padding: 10px 20px;
+  color: #FD8400;
 }
 .responsive .main-menu ul li a.current {
   background-image: none;
@@ -664,7 +678,6 @@ input, textarea {
 input.button {
   display: inline-block;
   width: auto;
-  background: url(../images/gtt.png) no-repeat;
   background-position: center bottom;
   color: #26b864;
   font-size: 16px;
@@ -781,7 +794,7 @@ ul.social li a {
 }
 
 .modal-dialog {
-    width: 600px;
+    width: 80%;
     margin: 230px auto;
         margin-top: 230px;
         margin-right: auto;
@@ -824,4 +837,34 @@ ul.social li a {
 }
 *::before, *::after {
     box-sizing: border-box;
+}
+
+a.list-group-item.active.getaways, a.list-group-item.active.getaways:hover, a.list-group-item.active.getaways:focus {
+    z-index: 2;
+    color: #FFF;
+    background-color: #26b864;
+    border-color: #26b864;
+}
+a.list-group-item.active.getaways-ex, a.list-group-item.active.getaways-ex:hover, a.list-group-item.active.getaways-ex:focus {
+    z-index: 2;
+    color: #FFF;
+    background-color: #FF0000;
+    border-color: #FF0000;
+}
+
+.product-item .item-thumb .overlay .overlay-inner a.view-detail {
+    position: relative;
+    margin-top: 15%;
+    display: block;
+    background: transparent url("../images/gtt.png") no-repeat scroll center 20px;
+    padding-bottom: 30px;
+    color: #26B864;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.fancybox-opened .fancybox-skin {
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    margin-top: 100px;
 }
